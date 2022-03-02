@@ -13,7 +13,6 @@ header {
     padding: 10px 10px;
     background-color: white;
     outline: solid 1px black;
-    opacity: 0.8;
 }
 
 .pc-gnav{
@@ -30,7 +29,7 @@ header {
   
   .m-menu {
     font-size: 32px;
-    line-height: 64px;
+    line-height: 60px;
     cursor: pointer;
   }
   
@@ -120,8 +119,8 @@ header {
     width: 100%;
     top: 0;
     left: 0;
-    background-color: white;
-    opacity: 0.8;
+    background-color: #EEEEEE;
+    opacity: 0.90;
   }
 
   .pc-gnav ul {
@@ -131,9 +130,16 @@ header {
     list-style-type: none;
   }
   
+  .pc-gnav li ul {
+    flex-direction: column !important;
+    height: 0;
+  }
+  
+  
   .pc-gnav a {
-    display: inline-block;
-    padding: 20px 25px;
+    display: block;
+    margin: auto;
+    padding: 20px 20px;
     white-space: nowrap;
     text-decoration: none;
     font-weight: bold;
@@ -148,16 +154,14 @@ header {
 /*---pc版ドロップダウンメニュー---*/
 
 .pc-gnav li li {
-  height: 0;
+  height: 60px;
   overflow: hidden;
-  transition: 3s;
+  transition: 0.5s;
+background: #EEEEEE !important;
 }
 
 .pc-gnav li:hover > ul > li{
   background: white;
-  margin: 0;
-  padding: 0;
-  display: block;
   overflow: visible;
 }
 
