@@ -2,25 +2,21 @@
 
 body {
 	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-	text-align: center;
 	margin: 0;
+	text-align: center;
 }
 
 /*------------------ header---------------------*/
-
 header {
+    padding: 5px 5px;
     position: fixed;
-    padding: 10px 10px;
     background-color: white;
-    outline: solid 1px black;
+    opacity: 0.9;
 }
 
-.pc-gnav{
-  display: none;
-}
 
-/* PCでのメニュー表示 */
-@media screen and (min-width:701px) and (max-width:1024px) {
+/* スマホ版でのメニュー表示 */
+@media screen and (max-width:699px){
 
   .m-menu {
       top: 0px;
@@ -29,7 +25,7 @@ header {
   
   .m-menu {
     font-size: 32px;
-    line-height: 60px;
+    line-height: 30px;
     cursor: pointer;
   }
   
@@ -39,8 +35,10 @@ header {
   
 }
 
-/*------------------ nav ---------------------*/
-/*--- スマホ版(画面が小さい場合) ---*/
+.pc-gnav{
+  display: none;
+}
+
 .overlay {
   position: fixed;
   top:0;
@@ -60,10 +58,14 @@ header {
   pointer-events: auto;
 }
 
+.overlay m-menu {
+  padding: 5px 5px;
+}
+
 .overlay #close {
   position: absolute;
-  top: 7px;
-  left: 7px;
+  top: 2px;
+  left: 2px;
   font-size: 32px;
   cursor: pointer;
 }
@@ -92,20 +94,19 @@ header {
   color: white;
 }
 
-/*---スマホ版ドロップダウンメニュー ---*/
+/*---スマホのドロップダウンメニュー ---*/
 
-.gnav2 li li {
-  height: 0;
-  overflow: hidden;
+.gnav2 li li ul {
+  overflow: hidden ;
   transition: 0.5s;
 }
 
-.gnavav2 li link:hover > li > a {
+.gnavav2 li li link:hover > li > a {
   overflow: visible;
   margin: 0;
 }
 
-/* --------------スマホ画面幅でのメニュー表示 ------------*/
+/* --------------PC版画面でのメニュー表示 ------------*/
 
 @media(min-width: 700px) {
   .m-menu{
@@ -120,7 +121,7 @@ header {
     top: 0;
     left: 0;
     background-color: #EEEEEE;
-    opacity: 0.90;
+    opacity: 0.9;
   }
 
   .pc-gnav ul {
@@ -143,6 +144,7 @@ header {
     white-space: nowrap;
     text-decoration: none;
     font-weight: bold;
+    color: #007700;
   }
 
   .pc-gnav a:hover {
@@ -157,7 +159,7 @@ header {
   height: 60px;
   overflow: hidden;
   transition: 0.5s;
-background: #EEEEEE !important;
+  background: #EEEEEE !important;
 }
 
 .pc-gnav li:hover > ul > li{
@@ -194,6 +196,7 @@ background: #EEEEEE !important;
   font-size: 36px;
 }
 
+
 /*--------------------  このサイトについて  ---------------------*/
 #site {
   margin-bottom: 150px;
@@ -223,15 +226,95 @@ background: #EEEEEE !important;
   font-size: 36px;
 }
 
-.footprint {
-  width: 200px;
-  height: 150px;
+/*--------------------　ポートフォリオサイトについて　---------------------*/
+
+#works {
+  margin-bottom: 150px;
+}
+
+#works p {
+  font-weight: bold;
+  font-size: large;
+  margin-top: 30px;
+  
+}
+.object{
+  width: 400px;
+  height: 250px;
+  margin-top: 30px;
+  margin-bottom: 50px;
   box-shadow: 0 0 10px #444444;
-  border-radius: 60%;
+}
+
+#works a:hover{
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+/*--------------------　自分のスキルについて　---------------------*/
+
+#skill {
+  margin-bottom: 150px;
+}
+
+#skill .tech {
+  width: 400px;
+  height: 250px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 10px #444444;
+}
+
+#skill p {
+  font-weight: bold;
+  font-size: large;
+}
+
+/*--------------------　プロフィールについて　---------------------*/
+
+#profile {
+  margin-bottom: 150px;
+}
+
+.road {
+  margin-bottom: 30px;
+}
+
+/*--------------------　趣味について　---------------------*/
+
+#hobby {
+  margin-bottom: 150px;
+}
+
+.cook {
+  width: 450px;
+  height: 300px;
   margin-top: 30px;
 }
 
+/*--------------------　連絡先について　---------------------*/
 
+.hw {
+  font-weight: bold;
+  font-size: large;
+  font-size: 36px;
+}
+
+.mail {
+  width: 150px;
+  height: 150px;
+  margin-top: 15px;
+  margin-bottom: 30px
+}
+
+form {
+  margin: 30px 0;
+  font-size: 15px
+}
+
+#btn {
+  margin: 30px 0;
+}
 
 /*------------------ クリックしたら Top画面に戻る部分---------------------*/
 
