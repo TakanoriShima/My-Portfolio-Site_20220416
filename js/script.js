@@ -2,20 +2,20 @@
 
 $(function(){
   
-  // ハンバーガーメニュー
-  const open = document.getElementById('open');
-  const overlay = document.querySelector('.overlay');
-  const close = document.getElementById('close');
+  // スマホ版のハンバーガーメニュー
+  const open = $('#open').text();
+  const overlay = $('overlay').text();
+  const close = $('#close');
   // メニューバーをクリックして表示させる処理
-  open.addEventListener('click' , () => {
-    overlay.classList.add('show');
-    open.classList.add('hide');
+  $('#open').on('click' , () => {
+    $('.overlay').addClass('show');
+    $('.open').addClass('hide');
   });
   
   // メニューバーをクリックして閉じるときの処理
-  close.addEventListener('click' , () => {
-    overlay.classList.remove('show');
-    open.classList.remove('hide');
+  $('#close').on('click' , () => {
+    $('.overlay').removeClass('show');
+    $('.open').removeClass('hide');
   });
   
   // 福岡の街並みの画像アニメーション(slider)

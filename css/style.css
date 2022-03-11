@@ -16,7 +16,7 @@ header {
 
 
 /* スマホ版でのメニュー表示 */
-@media screen and (max-width:699px){
+@media screen and (max-width:420px){
 
   .m-menu {
       top: 0px;
@@ -153,6 +153,7 @@ header {
     text-decoration: none;
   }
   
+}
 /*---pc版ドロップダウンメニュー---*/
 
 .pc-gnav li li {
@@ -167,7 +168,6 @@ header {
   overflow: visible;
 }
 
-}
 
 /*------------------ main1(博多の風景、Welcome文) ---------------------*/
 
