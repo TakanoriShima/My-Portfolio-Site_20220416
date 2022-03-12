@@ -2,22 +2,20 @@
 
 body {
 	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-	margin: 0;
-	text-align: center;
 }
 
 /*------------------ header---------------------*/
-header {
-    padding: 5px 5px;
-    position: fixed;
-    background-color: white;
-    opacity: 0.9;
-}
 
+  header {
+      padding: 5px 5px;
+      position: fixed;
+      background-color: white;
+      opacity: 0.9;
+  }
 
 /* スマホ版でのメニュー表示 */
-@media screen and (max-width:420px){
-
+@media screen and (min-width:420px){
+  
   .m-menu {
       top: 0px;
       right: 0px;
@@ -28,17 +26,17 @@ header {
     line-height: 30px;
     cursor: pointer;
   }
+
   
+  .pc-gnav{
+    display: none;
+  }
+  
+
   .m-menu #open.hide {
     display: none;
   }
   
-}
-
-.pc-gnav{
-  display: none;
-}
-
 .overlay {
   position: fixed;
   top:0;
@@ -82,6 +80,7 @@ header {
   opacity: 0;
   transform: translateY(16px);
   transition: opacity 0.3s, transform 0.3s;
+  text-align: center;
 }
 
 .overlay.show li {
@@ -93,6 +92,7 @@ header {
   background: #007700;
   color: white;
 }
+
 
 /*---スマホのドロップダウンメニュー ---*/
 
@@ -106,12 +106,17 @@ header {
   margin: 0;
 }
 
+}
 /* --------------PC版画面でのメニュー表示 ------------*/
 
-@media(min-width: 700px) {
+@media(mix-width: 421px) {
+  body {
+    text-align: center;
+  }
   .m-menu{
     display: none;
   }
+
   
   .pc-gnav {
     display: flex;
@@ -124,36 +129,35 @@ header {
     opacity: 0.9;
   }
 
-  .pc-gnav ul {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-  }
-  
-  .pc-gnav li ul {
-    flex-direction: column !important;
-    height: 0;
-  }
-  
-  
-  .pc-gnav a {
-    display: block;
-    margin: auto;
-    padding: 20px 20px;
-    white-space: nowrap;
-    text-decoration: none;
-    font-weight: bold;
-    color: #007700;
-  }
-
-  .pc-gnav a:hover {
-    background: #007700;
-    color: white;
-    text-decoration: none;
-  }
-  
+.pc-gnav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
+
+.pc-gnav li ul {
+  flex-direction: column !important;
+  height: 0;
+}
+
+
+.pc-gnav a {
+  display: block;
+  margin: auto;
+  padding: 20px 20px;
+  white-space: nowrap;
+  text-decoration: none;
+  font-weight: bold;
+  color: #007700;
+}
+
+.pc-gnav a:hover {
+  background: #007700;
+  color: white;
+  text-decoration: none;
+}
+
 /*---pc版ドロップダウンメニュー---*/
 
 .pc-gnav li li {
@@ -168,6 +172,7 @@ header {
   overflow: visible;
 }
 
+}
 
 /*------------------ main1(博多の風景、Welcome文) ---------------------*/
 
@@ -199,7 +204,7 @@ header {
 
 /*--------------------  このサイトについて  ---------------------*/
 #site {
-  margin-bottom: 150px;
+  margin: 150px 0;
 }
 
 #hs {
@@ -307,9 +312,15 @@ header {
   margin-bottom: 30px
 }
 
-form {
+#contact form {
   margin: 30px 0;
-  font-size: 15px
+}
+#contact input {
+  margin: 30px 0;
+  all: unset;
+  border-bottom: 1px solid #aaa;
+  padding: 4px;
+  width: 500px;
 }
 
 #btn {
@@ -319,14 +330,28 @@ form {
 /*------------------ クリックしたら Top画面に戻る部分---------------------*/
 
 #back {
-  margin-top: 30px;
   line-height: 80px;
   background: #99CC00;
   width: 100%;
 }
 
+span.material-icons {
+  margin-top: 40px;
+}
+
+#back span.material-icons a {
+  font-size: 50px;
+  text-decoration: none;
+  color: #005500;
+}
+
+#back span.material-icons a:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
 #back p {
-  padding-bottom: 20px;
+  padding-bottom: 50px;
   margin: 0;
   font-size: 30px;
   font-weight: bold;
