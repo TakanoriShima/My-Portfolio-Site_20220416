@@ -6,16 +6,25 @@ $(function(){
   const open = $('#open').text();
   const overlay = $('overlay').text();
   const close = $('#close');
+  
   // メニューバーをクリックして表示させる処理
   $('#open').on('click' , () => {
+    $('.overlay').show();
     $('.overlay').addClass('show');
-    $('.open').addClass('hide');
+    $('#open').addClass('hide');
   });
   
   // メニューバーをクリックして閉じるときの処理
   $('#close').on('click' , () => {
     $('.overlay').removeClass('show');
-    $('.open').removeClass('hide');
+    $('#open').removeClass('hide');
+  });
+  
+  // ハンバーガーメニュー中にリンクをクリックしたときに、ハンバーガーメニューを閉じる処理
+  $('.overlay a').on('click', () => {
+    $('.overlay').removeClass('show');
+    $('.overlay').hide();
+    $('#open').removeClass('hide');
   });
   
   // 福岡の街並みの画像アニメーション(slider)

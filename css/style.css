@@ -2,25 +2,31 @@
 
 /*-------------------  common -------------------*/
 
+html {
+  width: 100vw;
+}
 body {
 	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 	text-align: center;
+	width: 100vw;
 }
 
 /*------------------- スマホ版でのメニュー表示 ----------------*/
-@media(max-width:600px) {
+@media(max-width:500px) {
   .pc-gnav{
     display: none;
   }
   
   .m-menu {
     position: fixed;
-  }
-  
-  .m-menu {
+    padding: 0 10px;
     font-size: 32px;
     line-height: 30px;
     cursor: pointer;
+    top: -30px;
+    left: 0px;
+    background: #fff;
+    outline: 1px solid black;
   }
 
   .m-menu #open.hide {
@@ -29,13 +35,12 @@ body {
   
   .overlay {
     position: fixed;
-    top:0;
-    bottom: 0;
+    top: 0;
     right: 0;
     left: 0;
+    bottom: 0;
     background-color: rgba(255, 255, 255, 0.9);
     text-align: center;
-    padding: 64px;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.5s;
@@ -44,6 +49,7 @@ body {
   .overlay.show{
     opacity: 1;
     pointer-events: auto;
+    width: 100vw;
   }
   
   .overlay m-menu {
@@ -52,8 +58,8 @@ body {
   
   .overlay #close {
     position: absolute;
-    top: 2px;
-    left: 2px;
+    top: -34px;
+    left: 6px;
     font-size: 32px;
     cursor: pointer;
   }
@@ -63,6 +69,8 @@ body {
     font-weight: bold;
     margin: 0;
     padding: 0;
+    width: 100%;
+    margin-top: 85px;
   }
   
   .overlay li {
@@ -78,6 +86,7 @@ body {
     opacity: 1;
     transform: none;
   }
+  
   .overlay ul li a {
     text-decoration: none;
     color: #007700;
@@ -122,10 +131,10 @@ body {
   }
   
   .pc-gnav ul {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
   }
   
   .pc-gnav li ul {
@@ -175,7 +184,7 @@ body {
     width: 500px;
     height: 300px;
     display: inline-block;
-    margin-top: 130px;
+    margin-top: 45px !important;
     margin-bottom: 25px;
 }
 
@@ -188,7 +197,19 @@ body {
   margin-top: 30px;
 }
 
-/*--------- それぞれのコンテンツの見出しの文字 ---------------*/
+/*--------- それぞれのコンテンツに共通するものについて ---------------*/
+
+/* ナビをクリックしたときの位置調整 */
+.contents {
+  padding-top: 100px;
+}
+
+.content {
+  padding-top: 100px;
+  margin-top: -100px;
+}
+
+/* 文字について */
 .h {
   margin-bottom: 20px;
   font-weight: bold;
@@ -215,7 +236,7 @@ body {
 
 /*--------------------　自分について　---------------------*/
 #me {
-  margin-bottom: 180px;
+  margin-bottom: 250px;
 }
 
 .hm {
@@ -224,10 +245,46 @@ body {
   font-size: 36px;
 }
 
+.box {
+  margin: 50px auto;
+  width: 100px;
+  height: 100px;
+  
+  animation-name: move;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes move{
+  0% {
+    background: #007700;
+  }
+  
+  50% {
+    background: #1E90FF;
+    transform: rotate(1080deg);
+  }
+  
+  75% {
+    background: #FFD700;
+  }
+  
+  100% { 
+    background-color: #FF0000;
+    border-radius: 70%;
+  }
+}
+
+/* boxをクリックしてGitHubへアクセス */
+a .box:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
 /*--------------------　ポートフォリオサイトについて　---------------------*/
 
 #works {
-  margin-bottom: 150px;
+  margin-bottom: 200px;
 }
 
 #works p {
@@ -251,14 +308,14 @@ body {
 
 /*--------------------　自分のスキルについて　---------------------*/
 #skill {
-  margin-bottom: 150px;
+  margin-bottom: 200px;
 }
 
 #skill .tech {
-  width: 400px;
+  width: 300px;
   height: 250px;
   margin-top: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   box-shadow: 0 0 10px #444444;
 }
 
@@ -273,6 +330,7 @@ body {
 }
 
 .road {
+  box-shadow: 0 0 10px #444444;
   margin-bottom: 30px;
 }
 
@@ -282,9 +340,11 @@ body {
 }
 
 .cook {
+  box-shadow: 0 0 10px #444444;
   width: 450px;
   height: 300px;
-  margin-top: 30px;
+  margin-top: 25px;
+  margin-bottom: 50px;
 }
 
 /*--------------------　連絡先について　---------------------*/
