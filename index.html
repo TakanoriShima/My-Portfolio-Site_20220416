@@ -139,21 +139,17 @@
         <div id="contact" class="content">
             <div class="hw">Contact me</div>
             <img src="images/mail.jpg" alt="メールの画像" class="mail">
-            <p>最後までご覧いただきありがとうございました。</p>
-            <p>このサイトを通して、私のことを少しでも知っていただけたのならうれしく思います。</p>
+            <p>最後までご覧いただきありがとうございました。このサイトを通して、私のことを少しでも知っていただけたのならうれしく思います。</p>
             <p>もし、このサイトや私について何かコメントがありましたら、下記のフォームをご利用ください。</p>
             
-            <form action="" >
-                Name: <input type="text" name="name" placeholder="田中太郎"/><br><br>
-                Email: <input type="text" name="email" placeholder="sample@gmail.com"/><br>
-                <br><br>
-                Comment
-                <br><br>
+            <form action="submit" method="POST">
+                Name: <input type="text" name="name" placeholder="田中 太郎"/><br><br>
+                Email: <input type="text" name="email" placeholder="sample@gmail.com">
+                <p>Comment</p>
                 <textarea name="comment" id="comment" cols="30" rows="10"></textarea><br>
             </form>
-            <button id="btn">送信</button>
+            <a href=""><button id="btn">送信</button></a>
         </div>
-        
     </div>
     
     <!--クリックしたらTop画面に戻る-->
