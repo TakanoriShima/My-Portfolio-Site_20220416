@@ -6,10 +6,12 @@ html {
   width: 100vw;
 }
 body {
-	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-family: cursive;
 	text-align: center;
 	width: 100vw;
+	font-size: 15px;
 }
+
 
 /*------------------- スマホ版でのメニュー表示 ----------------*/
 @media(max-width:450px) {
@@ -128,6 +130,7 @@ body {
     left: 0;
     background-color: #EEEEEE;
     opacity: 0.9;
+    z-index: 100;
   }
   
   .pc-gnav ul {
@@ -175,11 +178,6 @@ body {
 }
 
 /*------------------ main1(博多の風景、Welcome文) ---------------------*/
-#txt_animation {
-  margin-top: 30px;
-  height: 300px;
-}
-
 .hakata {
     width: 500px;
     height: 300px;
@@ -187,6 +185,12 @@ body {
     margin-top: 45px !important;
     margin-bottom: 25px;
 }
+
+#txt_animation {
+  margin-top: 30px;
+  height: 200px;
+}
+
 
 .first, .second {
   text-align: center;
@@ -201,7 +205,7 @@ body {
 
 /* ナビをクリックしたときの位置調整 */
 .contents {
-  padding-top: 100px;
+  padding-top: 70px;
 }
 
 .content {
@@ -218,7 +222,8 @@ body {
 
 /*--------------------  このサイトについて  ---------------------*/
 #site {
-  margin: 150px 0;
+  margin-top: 10px;
+  margin-bottom: 170px;
 }
 
 #hs {
@@ -243,6 +248,10 @@ body {
   margin-bottom: 50px;
   font-weight: bold;
   font-size: 36px;
+}
+
+#git {
+  font-weight: bold;
 }
 
 .box {
@@ -284,19 +293,19 @@ a .box:hover {
 /*--------------------　ポートフォリオサイトについて　---------------------*/
 
 #works {
-  margin-bottom: 200px;
+  margin-bottom: 220px;
 }
 
 #works p {
   font-weight: bold;
-  font-size: large;
+  font-size: 16px;
   margin-top: 30px;
   
 }
 .object{
-  width: 400px;
-  height: 250px;
-  margin-top: 30px;
+  width: 300px;
+  height: 200px;
+  margin-top: 40px;
   margin-bottom: 50px;
   box-shadow: 0 0 10px #444444;
 }
@@ -308,12 +317,12 @@ a .box:hover {
 
 /*--------------------　自分のスキルについて　---------------------*/
 #skill {
-  margin-bottom: 200px;
+  margin-bottom: 180px;
 }
 
 #skill .tech {
   width: 300px;
-  height: 250px;
+  height: 200px;
   margin-top: 30px;
   margin-bottom: 50px;
   box-shadow: 0 0 10px #444444;
@@ -321,7 +330,7 @@ a .box:hover {
 
 #skill p {
   font-weight: bold;
-  font-size: large;
+  font-size: 14px;
 }
 
 /*--------------------　プロフィールについて　---------------------*/
@@ -330,8 +339,11 @@ a .box:hover {
 }
 
 .road {
+  width: 350px;
+  height: 200px;
   box-shadow: 0 0 10px #444444;
-  margin-bottom: 30px;
+  margin: 30px 0 50px 0;
+  
 }
 
 /*--------------------　趣味について　---------------------*/
@@ -341,8 +353,8 @@ a .box:hover {
 
 .cook {
   box-shadow: 0 0 10px #444444;
-  width: 450px;
-  height: 300px;
+  width: 350px;
+  height: 250px;
   margin-top: 25px;
   margin-bottom: 50px;
 }
@@ -384,6 +396,11 @@ form textarea {
 
 #btn {
   margin: 50px;
+  padding: 8px 20px;
+  color: #FFF;
+  background-color: gray;
+  border-radius: 3px;
+  font-weight: 14px;
 }
 
 #btn:hover {
