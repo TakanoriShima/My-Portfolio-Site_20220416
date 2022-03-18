@@ -57,17 +57,14 @@ $(function(){
       
         $('#slider img').eq(s_count % 6).animate({marginLeft: '400'}, 2000),
         $('#slider img').eq((s_count + 1) % 6).animate({marginLeft: '0px'}, 2000),
-        console.log('a')
         
     ).done(
         () => {
             $('#slider img').eq(s_count % 6).css('margin-left', '-400px');
-            console.log('b')
         }
     ).done(
         () => {
           s_count++;
-          console.log('s_count = ' + s_count);
         }
     );
   };
@@ -112,6 +109,34 @@ $(function(){
   
   // h1のテキストアニメーションの実行
   const timer1 = setInterval(text_animation1, 100);
-
+  
+  
+  // hobbyの料理写真のアニメーション(fadein/fadeout)
+  const pictures = [
+      'images/cook0.jpg',
+      'images/cook1.jpg',
+      'images/cook2.jpg',
+      'images/cook3.jpg',
+      'images/cook4.jpg',
+      'images/cook5.jpg',
+    ];
+    
+  let ff_count = 1;
+  
+  // fadein_fadeout関数の定義
+  const fadein_fadeout = () => {
+    $('#fadein_fadeout img').animate({'opacity': 0}, 1000, () => {
+      $('#fadein_fadeout img').prop('src', pictures[ff_count]);
+      $('#fadein_fadeout img').animate({'opacity': 1});
+      ff_count++;
+      if(ff_count === images.length) {
+        ff_count = 0;
+      }
+    });
+  };
+  
+  // fadein_fadeout関数の実行
+  setInterval(fadein_fadeout, 4000);
+  
 });
 
