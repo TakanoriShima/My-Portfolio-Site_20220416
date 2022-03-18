@@ -129,7 +129,7 @@ body {
     width: 100%;
     top: 0;
     left: 0;
-    background-color: #EEEEEE;
+    background-color: #fff;
     opacity: 0.9;
     z-index: 100;
   }
@@ -153,12 +153,14 @@ body {
     white-space: nowrap;
     text-decoration: none;
     font-weight: bold;
+    background: #fff;
     color: #007700;
+    
   }
   
   .pc-gnav a:hover {
     background: #007700;
-    color: white;
+    color: #fff;
     text-decoration: none;
   }
   
@@ -180,7 +182,7 @@ body {
 
 /*---------- Top画面のスライドアニメーション -----------*/
 div #wrapper {
-  margin: 0px auto;
+  text-align: center;
   width: 500px;
 }
 
@@ -201,19 +203,19 @@ div #slider {
   border: 0;
   width: 400px;
   height: 240px;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 /*---------- Top画面のテキストアニメーション -----------*/
 
 #txt_animation {
   margin-top: 50px;
-  height: 200px;
+  height: 110px;
+  text-align: center;
 }
 
 
 .first, .second {
-  text-align: center;
   color: #006600;
   font-size: 30px;
 }
@@ -222,11 +224,18 @@ div #slider {
   margin-top: 30px;
 }
 
+.town {
+  width: 350px;
+  height: 160px;
+  margin-top: 30px;
+  opacity: 0.8;
+}
+
 /*--------- それぞれのコンテンツに共通するものについて ---------------*/
 
 /* ナビをクリックしたときの位置調整 */
 .contents {
-  padding-top: 120px;
+  padding-top: 90px;
 }
 
 .content {
