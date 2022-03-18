@@ -2,6 +2,12 @@
 
 /*-------------------  common -------------------*/
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   width: 100vw;
 }
@@ -9,7 +15,7 @@ body {
 	font-family: cursive;
 	text-align: center;
 	width: 100vw;
-	font-size: 15px;
+	font-size: 14px;
 }
 
 
@@ -195,6 +201,7 @@ body {
 .first, .second {
   text-align: center;
   color: #006600;
+  font-size: x-large;
 }
 
 .second {
@@ -217,7 +224,7 @@ body {
 .h {
   margin-bottom: 20px;
   font-weight: bold;
-  font-size: 36px;
+  font-size: 30px;
 }
 
 /*--------------------  このサイトについて  ---------------------*/
@@ -229,7 +236,7 @@ body {
 #hs {
   margin-bottom: 30px;
   font-weight: bold;
-  font-size: 36px;
+  font-size: 30px;
 }
 
 .coffee {
@@ -247,7 +254,7 @@ body {
 .hm {
   margin-bottom: 50px;
   font-weight: bold;
-  font-size: 36px;
+  font-size: 30px;
 }
 
 #git {
@@ -363,7 +370,7 @@ a .box:hover {
 .hw {
   font-weight: bold;
   font-size: large;
-  font-size: 36px;
+  font-size: 30px;
 }
 
 .mail {
@@ -380,7 +387,7 @@ a .box:hover {
 #contact input {
   all: unset;
   border-bottom: 1px solid #aaa;
-  width: 300px;
+  width: 250px;
   margin: 10px;
 }
 
@@ -390,7 +397,7 @@ a .box:hover {
 }
 
 form textarea {
-  width: 370px;
+  width: 300px;
   margin-top: 10px; 
 }
 
@@ -419,7 +426,7 @@ span.material-icons {
   margin-top: 40px;
 }
 
-#back span.material-icons a {
+#back a span.material-icons {
   font-size: 50px;
   text-decoration: none;
   color: #008000;
