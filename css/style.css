@@ -2,25 +2,18 @@
 
 /*-------------------  common -------------------*/
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 html {
   width: 100vw;
 }
 body {
 	font-family: cursive;
-	text-align: center;
 	width: 100vw;
 	font-size: 14px;
 }
 
 
 /*------------------- スマホ版でのメニュー表示 ----------------*/
-@media(max-width:450px) {
+@media(max-width:420px) {
   .pc-gnav{
     display: none;
   }
@@ -52,6 +45,7 @@ body {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.5s;
+    z-index: 100;
   }
   
   .overlay.show{
@@ -131,6 +125,7 @@ body {
     display: flex;
     position: fixed;
     justify-content: flex-end;
+    text-align: center;
     width: 100%;
     top: 0;
     left: 0;
@@ -183,17 +178,36 @@ body {
 
 }
 
-/*------------------ main1(博多の風景、Welcome文) ---------------------*/
-.hakata {
-    width: 500px;
-    height: 300px;
-    display: inline-block;
-    margin-top: 45px !important;
-    margin-bottom: 25px;
+/*---------- Top画面のスライドアニメーション -----------*/
+div #wrapper {
+  margin: 0px auto;
+  width: 500px;
 }
 
+div #slider {
+  width: 400px;
+  height: 240px;
+  margin: 0 auto;
+}
+
+div #slider {
+  position: relative;
+  overflow: hidden;
+}
+
+#slider img {
+  position: absolute;
+  top: 0;
+  border: 0;
+  width: 400px;
+  height: 240px;
+  border-radius: 10px;
+}
+
+/*---------- Top画面のテキストアニメーション -----------*/
+
 #txt_animation {
-  margin-top: 30px;
+  margin-top: 50px;
   height: 200px;
 }
 
@@ -201,7 +215,7 @@ body {
 .first, .second {
   text-align: center;
   color: #006600;
-  font-size: x-large;
+  font-size: 30px;
 }
 
 .second {
@@ -212,7 +226,7 @@ body {
 
 /* ナビをクリックしたときの位置調整 */
 .contents {
-  padding-top: 70px;
+  padding-top: 120px;
 }
 
 .content {
@@ -220,7 +234,11 @@ body {
   margin-top: -100px;
 }
 
-/* 文字について */
+/* 文字の位置や大きさについて */
+.position {
+  text-align: center;
+}
+
 .h {
   margin-bottom: 20px;
   font-weight: bold;
@@ -418,6 +436,7 @@ form textarea {
 /*------------------ クリックしたら Top画面に戻る部分---------------------*/
 #back {
   line-height: 80px;
+  
   background: #99CC00;
   width: 100%;
 }
