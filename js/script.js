@@ -110,6 +110,20 @@ $(function(){
   // h1のテキストアニメーションの実行
   const timer1 = setInterval(text_animation1, 100);
   
+  // スクロールアニメーション
+  $(window).scroll(function () {
+    // ウィンドウの高さを取得
+    const wh = $(window).height();
+    // スクロール量を取得
+    const scroll = $(window).scrollTop();
+    // フェードインさせたいの要素の上からの距離を取得
+    $('.content').each(function () {
+      const targetPosition = $(this).offset().top;
+      if(scroll > targetPosition - wh + 100){
+        $(this).addClass('.is-fadein');
+      }
+    });
+  });
   
   // hobbyの料理写真のアニメーション(fadein/fadeout)
   const pictures = [
