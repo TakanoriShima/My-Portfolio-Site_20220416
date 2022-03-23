@@ -217,7 +217,7 @@ div #slider {
 
 .first, .second {
   color: #006600;
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .second {
@@ -243,10 +243,10 @@ div #slider {
   margin-top: -100px;
 
   /* 最初は非表示 */
-  opacity: 0;
-  visibility: hidden;
-  transform: translate(0, 40px);
-  transition: opacity 1s, visibility 1s, transform 1s;
+  /*opacity: 0;*/
+  /*visibility: hidden;*/
+  /*transform: translate(0, 40px);*/
+  /*transition: opacity 1s, visibility 1s, transform 1s;*/
 }
 
 /* jQueryで各contentクラスの要素をフェードインさせるためのクラス*/
@@ -348,27 +348,86 @@ a .box:hover {
 /*--------------------　ポートフォリオサイトについて　---------------------*/
 
 #works {
-  margin-bottom: 220px;
+  margin-bottom: 200px;
 }
 
 #works p {
   font-weight: bold;
   font-size: 16px;
   margin-top: 30px;
-  
 }
+
 .object{
   width: 300px;
   height: 200px;
-  margin-top: 40px;
-  margin-bottom: 50px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  border-radius: 10px;
   box-shadow: 0 0 10px #444444;
 }
 
-#works a:hover{
+/* モーダルウィンドウ */
+
+#works img.object:hover {
   cursor: pointer;
   opacity: 0.8;
 }
+
+#mask {
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 200;
+}
+
+#mask.hidden {
+  display: none;
+}
+
+#modal {
+  background: #fff;
+  width: 370px;
+  padding: 40px 20px;
+  border-radius: 10px;
+  position: fixed;
+  top: 180px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transition: transform 0.6s;
+  z-index: 300;
+}
+
+#modal.hidden {
+  transform: translate(0, -1000px);
+}
+
+#modal a {
+  text-decoration: none;
+  color: #007700;
+}
+
+#modal a:hover {
+  border-bottom: 2px solid #007700;
+}
+
+#close_2 {
+  cursor: pointer;
+  width: 100px;
+  padding: 10px 10px;
+  border: 2px solid #005500;
+  margin: 40px auto 0;
+  border-radius: 4px;
+}
+
+#close_2:hover {
+  color: #fff;
+  background: #007700;
+}
+
 
 /*--------------------　自分のスキルについて　---------------------*/
 #skill {
