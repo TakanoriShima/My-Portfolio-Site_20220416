@@ -125,7 +125,7 @@ $(function(){
   //   });
   // });
   
-  // worksのモーダルウィンドウ
+  // Portのモーダルウィンドウ
   const open_2 = document.getElementById('open_2');
   const close_2 = document.getElementById('close_2');
   const modal = document.getElementById('modal');
@@ -146,7 +146,6 @@ $(function(){
    $('#mask').on('click' , () => {
    $('#close_2').on();
   });
-  
   
   // hobbyの料理写真のアニメーション(fadein/fadeout)
   const pictures = [

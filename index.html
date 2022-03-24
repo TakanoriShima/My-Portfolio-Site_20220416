@@ -118,8 +118,8 @@
                 <img src="images/skill.jpg" alt="スキルの画像" class="tech">
                 <div class="container mb-3 col-sm-8">
                     <div class="row mt-3 mb-3">
-                        <p class="text-success">スキル一覧</p>
-                        <table id="list" class="table table-bordered">
+                        <p>スキル一覧</p>
+                        <table class="table table-bordered">
                             <tr class="table-success">
                                 <th>プログラミング</th>
                                 <th>使用歴</th>
@@ -128,55 +128,55 @@
                             <tr>
                                 <td>HTML/CSS</td>
                                 <td>3か月</td>
-                                <td>★★★</td>
+                                <td class="star">★★★</td>
                             </tr>
                             <tr class="table-success">
                                 <td>Javascript/jQuery</td>
                                 <td>2か月</td>
-                                <td>★★</td>
+                                <td class="star">★★</td>
                             </tr>
                             <tr>
                                 <td>PHP</td>
                                 <td>2か月</td>
-                                <td>★★</td>
+                                <td class="star">★★</td>
                             </tr>
                             <tr class="table-success">
                                 <td>MySQL</td>
                                 <td>1か月</td>
-                                <td>★</td>
+                                <td class="star">★</td>
                             </tr>
                             <tr>
                                 <td>Bootstrap</td>
                                 <td>1か月</td>
-                                <td>★</td>
+                                <td class="star">★</td>
                             </tr>
                         </table>
                     </div>
                     <div class="row mt-5">
-                        <p class="text-success">スキルの見方</p>
+                        <p>スキルの見方</p>
                         <table class="table table-bordered">
                             <tr class="table-success">
                                 <th>星の数</th>
                                 <th>説明</th>
                             </tr>
                             <tr>
-                                <td>★</td>
+                                <td class="star">★</td>
                                 <td>基礎構文は学習済み</td>
                             </tr>
                             <tr class="table-success">
-                                <td>★★</td>
+                                <td class="star">★★</td>
                                 <td>基礎構文を応用して簡単なサンプルプログラムを実装できる</td>
                             </tr>
                             <tr>
-                                <td>★★★</td>
+                                <td class="star">★★★</td>
                                 <td>この技術を用いてオリジナルアプリを構築できる</td>
                             </tr>
                             <tr class="table-success">
-                                <td>★★★★</td>
+                                <td class="star">★★★★</td>
                                 <td>実務でこの技術を使った経験がある</td>
                             </tr>
                             <tr>
-                                <td>★★★★★</td>
+                                <td class="star">★★★★★</td>
                                 <td>この技術に関して他人に指導できる</td>
                             </tr>
                         </table>
@@ -188,20 +188,71 @@
             <div id="profile" class="content">
                 <div class="h">My Profile</div>
                 <img src="images/road.jpg" alt="道の画像" class="road">
-                <p>1992年 愛知県名古屋市で出生。</p>
-                <p>1999年~(小学校時代) 祖母の影響で民謡を習い始める。</p>
-                <p>2005年~(中学時代) 声変わりをきっかけに合唱にハマる。</p>
-                <p>2008年~(高校時代) 大学進学のため、勉強漬の毎日。</p>
-                <p>自転車通学で、毎日往復約26キロ移動。</p>
-                <p>太ももが競輪選手のようになる。</p>
-                <p>2011年~(大学時代) サークルでゴスペルを練習する毎日。</p>
-                <p>ある精神科医との出会いを機に、精神保健福祉士を志す。</p>
-                <p>2015年~(専門学校時代) 精神保健福祉士取得のため、勉強や実習に明け暮れる。</p>
-                <p>2016年~ 精神科病院で勤務。うつ病や統合失調症など様々な患者と向き合う毎日。</p>
-                <p>2020年~ 地域活動支援センターで、指導員として勤務。</p>
-                <p>利用者の障害特性を配慮しながら、余暇の場所づくりを研究する毎日。</p>
-                <p>2021年12月~ 医療福祉業界でのアナログな業務を経験し、デジタル化を進める仕事に興味を持つ。
-                <p>Webエンジニアへの転職を決意。侍エンジニア塾を受講。</p>
+                <div class="container mb-3 col-sm-9">
+                    <div class="row">
+                        <table class="table table-bordered">
+                            <tr class="table-success">
+                                <th class="col-sm-3">年表</th>
+                                <th>エピソード</th>
+                            </tr>
+                            <tr>
+                                <td>1992年8月4日</td>
+                                <td>愛知県名古屋市で出生。</td>
+                                
+                            </tr>
+                            <tr class="table-success">
+                                <td>1999年4月~(小学校時代)</td>
+                                <td>祖母の影響で民謡を習う。64ゲームが大好きだった。</td>
+                            </tr>
+                            <tr>
+                                <td>2005年4月~(中学時代)</td>
+                                <td>声変わりをきっかけに合唱にハマる。</td>
+                            </tr>
+                            <tr class="table-success">
+                                <td>2008年4月~(高校時代)</td>
+                                <td>
+                                    大学進学のため、勉強漬の毎日。自転車通学で、毎日往復約26キロ移動。<br>
+                                    太ももが競輪選手のようになる。
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2011年4月~(大学時代)</td>
+                                <td>
+                                    サークルでゴスペルを練習する毎日。<br>
+                                    大学4年の時、ある精神科医との出会いを機に、精神保健福祉士を志す。
+                                </td>
+                            </tr>
+                            <tr class="table-success">
+                                <td>2015年4月~(専門学校時代)</td>
+                                <td>精神保健福祉士取得のため、勉強や実習に明け暮れる。<br>
+                                    病院の患者さんたちの現状に衝撃を受ける。
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2016年4月~(就職)</td>
+                                <td>精神科病院で勤務。うつ病や統合失調症など様々な患者と向き合う毎日。</td>
+                            </tr>
+                            <tr class="table-success">
+                                <td>2020年6月~(転職)</td>
+                                <td>
+                                    地域活動支援センターで、指導員として勤務。<br>
+                                    利用者の障害特性を配慮しながら、余暇の場所づくりを研究する毎日。
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2021年8月末(退職)</td>
+                                <td>
+                                    医療福祉業界を経験してきた中で、DX化を推進する仕事に興味を持つ。<br>
+                                    Webエンジニアへの転職を決意。
+                                </td>
+                            </tr>
+                            <tr class="table-success">
+                                <td>2021年12月末~</td>
+                                <td>侍エンジニア塾を受講開始。</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
             </div>
             
             <!--自分の趣味について-->

@@ -171,6 +171,7 @@ body {
     overflow: hidden;
     transition: 0.5s;
     background: #EEEEEE !important;
+    box-shadow: 0 0 3px #444444;
   }
   
   .pc-gnav li:hover > ul > li{
@@ -444,8 +445,16 @@ a .box:hover {
 }
 
 #skill p {
+  color: #008000;
   font-weight: bold;
   font-size: 20px;
+  padding: 10px 0;
+  border-bottom: dotted 2px #008000; 
+}
+
+.star {
+  font-size: 18px;
+  color: #006400;
 }
 
 /*--------------------　プロフィールについて　---------------------*/
