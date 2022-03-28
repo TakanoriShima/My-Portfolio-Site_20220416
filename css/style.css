@@ -236,26 +236,15 @@ div #slider {
 
 /* ナビをクリックしたときの位置調整 */
 .contents {
-  padding-top: 90px;
+  padding-top: 100px;
 }
 
 .content {
-  padding-top: 100px;
-  margin-top: -100px;
-
-  /* 最初は非表示 */
-  /*opacity: 0;*/
-  /*visibility: hidden;*/
-  /*transform: translate(0, 40px);*/
-  /*transition: opacity 1s, visibility 1s, transform 1s;*/
+  padding-top: 170px;
+  margin-top: -150px;
+  
 }
 
-/* jQueryで各contentクラスの要素をフェードインさせるためのクラス*/
-.is-fadein {
-  opacity: 1;
-  visibility: visible;
-  transform: translate(0, 0);
-}
 
 /* 文字の位置や大きさについて */
 .position {
@@ -271,7 +260,7 @@ div #slider {
 /*--------------------  このサイトについて  ---------------------*/
 #site {
   margin-top: 10px;
-  margin-bottom: 170px;
+  margin-bottom: 120px;
   
 }
 
@@ -291,7 +280,7 @@ div #slider {
 
 /*--------------------　自分について　---------------------*/
 #me {
-  margin-bottom: 250px;
+  margin-bottom: 120px;
 }
 
 .hm {
@@ -349,7 +338,7 @@ a .box:hover {
 /*--------------------　ポートフォリオサイトについて　---------------------*/
 
 #works {
-  margin-bottom: 200px;
+  margin-bottom: 120px;
 }
 
 #works p {
@@ -432,11 +421,11 @@ a .box:hover {
 
 /*--------------------　自分のスキルについて　---------------------*/
 #skill {
-  margin-bottom: 180px;
+  margin-bottom: 120px;
 }
 
 #skill .tech {
-  width: 390px;
+  width: 350px;
   height: 200px;
   margin-top: 30px;
   margin-bottom: 50px;
@@ -459,20 +448,20 @@ a .box:hover {
 
 /*--------------------　プロフィールについて　---------------------*/
 #profile {
-  margin-bottom: 150px;
+  margin-bottom: 120px;
 }
 
 .road {
   width: 350px;
   height: 200px;
+  border-radius: 10px;
   box-shadow: 0 0 10px #444444;
   margin: 30px 0 50px 0;
-  
 }
 
 /*--------------------　趣味について　---------------------*/
 #hobby {
-  margin-bottom: 150px;
+  margin-bottom: 120px;
 }
 
 #fadein_fadeout img {

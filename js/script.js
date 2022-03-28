@@ -110,22 +110,56 @@ $(function(){
   // h1のテキストアニメーションの実行
   const timer1 = setInterval(text_animation1, 100);
   
-  // // スクロールアニメーション
-  // $(window).scroll(function () {
-  //   // ウィンドウの高さを取得
-  //   const wh = $(window).height();
-  //   // スクロール量を取得
-  //   const scroll = $(window).scrollTop();
-  //   // フェードインさせたいの要素の上からの距離を取得
-  //   $('.content').each(function () {
-  //     const targetPosition = $(this).offset().top;
-  //     if(scroll > targetPosition - wh + 100){
-  //       $(this).addClass('.is-fadein');
-  //     }
-  //   });
-  // });
+  // スクロールで各コンテンツを表示させる処理
+  // .content要素(計7個)を取得
+  let contents = $('.content');
+  // 表示画面の高さを取得
+  const window_height = $(window).height();
+  console.log("ブラウザの window height:" + window_height + "px");
   
-  // Portのモーダルウィンドウ
+  // 0番目のcontent要素から非表示させる
+  $.each(contents, (index, content) => {
+    // 注目しているcontent要素のoffset(座標)を取得
+    let offset = $(content).offset();
+    console.log(index + ": " + offset.top + "px");
+    
+    // そのcontent要素の座標がブラウザの表示領域にあるならば
+    if(window_height > offset.top + 100) { // +100はAbout meコンテンツのための微調整
+      // 表示
+      $(content).css({'opacity': '1'});
+    } else {
+      // 30px下げて非表示
+      $(content).css({
+        'opacity': '0',
+        'marginTop': '30px'
+      });
+    }
+  });
+  
+  // スクロールしたときの処理
+  $(window).scroll(function() {
+    // 現在のスクロール量を取得
+    let scroll_top = $(this).scrollTop();
+    console.log("現在のスクロール量: " + scroll_top + 'px');
+    
+    // 一つ一つのcontent要素に対しての処理
+    // .contentは計7個
+    $.each(contents , (index, content) => { 
+      // 注目しているcontent要素のoffset(座標)を取得
+      let offset = $(content).offset();
+      
+      // 各content要素のtop座標が、スクロール量+300より小さいときに表示
+      if(offset.top < scroll_top + 300) {
+        // 1秒かけてふわっと上がるような感じで各contentを出現させる。
+        $(content).animate({
+          'opacity':'1',
+          'marginTop':'-30px'
+        }, 1000);
+      }
+    });
+  });
+  
+  // Portfolioコンテンツのモーダルウィンドウ
   const open_2 = document.getElementById('open_2');
   const close_2 = document.getElementById('close_2');
   const modal = document.getElementById('modal');
