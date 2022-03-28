@@ -124,7 +124,7 @@ $(function(){
     console.log(index + ": " + offset.top + "px");
     
     // そのcontent要素の座標がブラウザの表示領域にあるならば
-    if(window_height > offset.top + 100) { // +100はAbout meコンテンツのための微調整
+    if(window_height > offset.top + 100) { // +200はAbout meコンテンツのための微調整
       // 表示
       $(content).css({'opacity': '1'});
     } else {
@@ -148,13 +148,13 @@ $(function(){
       // 注目しているcontent要素のoffset(座標)を取得
       let offset = $(content).offset();
       
-      // 各content要素のtop座標が、スクロール量+300より小さいときに表示
-      if(offset.top < scroll_top + 300) {
+      // 各content要素のtop座標が、スクロール量+100より小さいときに表示
+      if(offset.top < scroll_top + 200) {
         // 1秒かけてふわっと上がるような感じで各contentを出現させる。
         $(content).animate({
           'opacity':'1',
           'marginTop':'-30px'
-        }, 1000);
+        }, 300);
       }
     });
   });

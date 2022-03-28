@@ -96,7 +96,6 @@ body {
 
   .overlay a:hover {
     border-bottom: solid 2px #007700;
-    transform: 0.3s;
   }
   
   
@@ -210,7 +209,7 @@ div #slider {
 /*---------- Top画面のテキストアニメーション -----------*/
 
 #txt_animation {
-  margin-top: 50px;
+  margin-top: 40px;
   height: 110px;
   text-align: center;
 }
@@ -228,7 +227,7 @@ div #slider {
 .town {
   width: 350px;
   height: 160px;
-  margin-top: 30px;
+  margin-top: 15px;
   opacity: 0.8;
 }
 
@@ -236,12 +235,12 @@ div #slider {
 
 /* ナビをクリックしたときの位置調整 */
 .contents {
-  padding-top: 100px;
+  padding-top: 85px;
 }
 
 .content {
-  padding-top: 170px;
-  margin-top: -150px;
+  padding-top: 175px;
+  margin-top: -140px;
   
 }
 
@@ -260,7 +259,7 @@ div #slider {
 /*--------------------  このサイトについて  ---------------------*/
 #site {
   margin-top: 10px;
-  margin-bottom: 120px;
+  margin-bottom: 100px;
   
 }
 
@@ -280,7 +279,7 @@ div #slider {
 
 /*--------------------　自分について　---------------------*/
 #me {
-  margin-bottom: 120px;
+  margin-bottom: 100px;
 }
 
 .hm {
@@ -338,7 +337,7 @@ a .box:hover {
 /*--------------------　ポートフォリオサイトについて　---------------------*/
 
 #works {
-  margin-bottom: 120px;
+  margin-bottom: 100px;
 }
 
 #works p {
@@ -515,7 +514,6 @@ form textarea {
   color: #FFF;
   background-color: gray;
   border-radius: 3px;
-  font-weight: 14px;
 }
 
 #btn:hover {
