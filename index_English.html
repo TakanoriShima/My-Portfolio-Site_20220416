@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body style="background: url(images/green.jpg)">
-    <!--スマホ版のナビゲーション-->
+    <!--smartphone menu-->
     <div class="m-menu">
         <span class="material-icons" id="open">menu</span>
     </div>
@@ -29,7 +29,7 @@
                 <li><a href="index.html">Japanese</a></li>
             </ul>
     </div>
-    <!--PC版のナビゲーションを作成-->
+    <!--PC menu-->
     <div class="pc-gnav">
          <ul>
             <li><a href="#">Top</a></li>
@@ -57,7 +57,7 @@
     </div>
     
     <div class="contents">
-        <!--トップ画面の写真(福岡の街並み)-->
+        <!--Top screen (Scenery of Fukuoka)-->
         <div class="wrapper">
             <div id="slider"></div>
             <div id="txt_animation">
@@ -67,21 +67,21 @@
         </div>
         
         <div class="position">
-            <img src="images/fukuoka_town.jpg" alt="福岡の街のイラスト" class="town">   
-            <!--このサイトについて-->
+            <img src="images/fukuoka_town.jpg" alt="Clip art of city of Fukuoka" class="town">   
+            <!--About this site-->
             <div id="site" class="content">
                 <div id="hs">About this site</div>
                 <p>Here is Engineer Iwai's portfolio site.</p>
                 <p>My profile and productions are summarized here.</p>
                 <p>I made it so that people would know more about me.</p>
                 <p>Please take your time to view it over a cup of coffee.</p>
-                <img src="images/coffee.jpg" alt="コーヒー" class="coffee">
+                <img src="images/coffee.jpg" alt="Coffee Image" class="coffee">
             </div>
                 
-            <!--自分について-->
+            <!--About me-->
             <div id="me" class="content">
                 <div class="hm">About me</div>
-                <img src="images/myface.jpg" alt="自分のイメージ画像" class="myface">
+                <img src="images/myface.jpg" alt="My face" class="myface">
                 <p>I am from Nagoya City, Aichi Prefecture.</p>
                 <p>I am a graduate of Nanzan University, Faculty of Law.</p>
                 <p>I graduated from university in March 2015 and went on to Aichi College of Social Welfare and Medical Care.</p>
@@ -95,13 +95,13 @@
                 <a href="#"><div class="box"></div></a>
             </div>
             
-            <!--ポートフォリオサイトについて-->
+            <!--My portfolio-->
             <div id="works" class="content">
                 <div class="h">My portfolio</div>
                 <p>Here are some of the products I created while attending the Samurai Engineer School !!</p>
                 <p>Click here↓↓</p>
                 <div id="open_2">
-                    <img class="object" src="images/work.jpg" alt="制作物の画像">
+                    <img class="object" src="images/work.jpg" alt="Images of productions">
                 </div>
                 
                 <div id="mask" class="hidden"></div>
@@ -114,10 +114,10 @@
                 </div>
             </div>
             
-            <!--自分のスキルについて-->
+            <!--My programming skills-->
             <div id="skill" class="content">
                <div class="h">My programming skills</div>
-                <img src="images/skill.jpg" alt="スキルの画像" class="tech">
+                <img src="images/skill.jpg" alt="Images of Skills" class="tech">
                 <div class="container mb-3 col-sm-8">
                     <div class="row mt-3 mb-3">
                         <p>Skill List</p>
@@ -186,16 +186,16 @@
                 </div>
             </div>
             
-            <!--プロフィールについて-->
+            <!--My profile-->
             <div id="profile" class="content">
                 <div class="h">My Profile</div>
-                <img src="images/road.jpg" alt="道の画像" class="road">
+                <img src="images/road.jpg" alt="Images of the Road" class="road">
                 <div class="container mb-3 col-sm-9">
                     <div class="row">
                         <table class="table table-bordered">
                             <tr class="table-success">
-                                <th class="col-sm-3">年表</th>
-                                <th>エピソード</th>
+                                <th class="col-sm-3">Chronology</th>
+                                <th>Episode</th>
                             </tr>
                             <tr>
                                 <td>1992.8</td>
@@ -280,11 +280,11 @@
                 </div>
             </div>
             
-            <!--自分の趣味について-->
+            <!--My hobby-->
             <div id="hobby" class="content">
                 <div class="h">My hobby</div>
                 <div id="fadein_fadeout">
-                    <img src="images/cook0.jpg" alt="一番目の料理の写真">
+                    <img src="images/cook0.jpg" alt="Photo of the first dish">
                 </div>
                 
                 <p>My hobby is cooking. I cook a lot with my wife.</p>
@@ -292,7 +292,7 @@
                 <p>I became interested in slow food as I became more conscious of my food health.</p>
             </div>
             
-            <!--連絡先-->
+            <!--Contact-->
             <div id="contact" class="content">
                 <div class="hw">Contact</div>
                 <img src="images/mail.jpg" alt="メールの画像" class="mail">
@@ -300,29 +300,32 @@
                 <p>I am happy that you have learned a little about me through this site.</p>
                 <p>If you have any comments about this site or me, please use the form below.</p>
                 
-                <form action="submit" method="POST">
+                <!--Error message-->
+                <div id="message"></div>
+                <!--Input form-->
+                <form action="" method="">
                     Name: <input type="text" name="name" placeholder="Taro Tanaka"/><br><br>
                     Email: <input type="email" name="email" placeholder="sample@gmail.com">
                     <p>Comment</p>
                     <textarea name="comment" id="comment" cols="30" rows="10"></textarea><br>
-                    <button id="btn">Send</button>
+                    <button type="button" id="btn">Send</button>
                 </form>
             </div>
+            
+            <!--Return to the top screen.-->
             <div id="back">
                 <a href="index.html"><span class="material-icons">arrow_circle_up</span></a>
                 <p>Thank you for comming !!</p>
-                <!--フッタータグ-->
             </div>
+            <!--Footer-->
             <footer>
                 <small>©2022 Kazuma Iwai</small>
             </footer>
         </div>
     </div>
-    
-    <!--クリックしたらTop画面に戻る-->
-    
+
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
+    <script src="js/script_English.js"></script>
 </body>
 </html>
