@@ -124,15 +124,12 @@ $(function(){
     // console.log(index + ": " + offset.top + "px");
     
     // そのcontent要素の座標がブラウザの表示領域にあるならば
-    if(window_height > offset.top + 50) { // +50はAbout meコンテンツのための微調整
+    if(window_height > offset.top) {
       // 表示
       $(content).css({'opacity': '1'});
     } else {
       // 30px下げて非表示
-      $(content).css({
-        'opacity': '0',
-        'marginTop': '20px'
-      });
+      $(content).css({'opacity': '0'});
     }
   });
   
@@ -148,13 +145,10 @@ $(function(){
       // 注目しているcontent要素のoffset(座標)を取得
       let offset = $(content).offset();
       
-      // 各content要素のtop座標が、スクロール量+50より小さいときに表示
-      if(offset.top < scroll_top + 50) {
+      // 各content要素のtop座標が、スクロール量より小さいときに表示
+      if(offset.top < scroll_top) {
         // 1秒かけてふわっと上がるような感じで各contentを出現させる。
-        $(content).animate({
-          'opacity':'1',
-          'marginTop':'-20px'
-        }, 300);
+        $(content).animate({'opacity':'1',}, 300);
       }
     });
   });
@@ -215,7 +209,7 @@ $(function(){
     validate() {
       // 入力が正しいかどうかのフラッグ
       let flag = true;
-      $('li').empty();
+      $('li').remove();
       const ul = $('<ul>');
       // もし名前が入力されていなければ
       if(this.name === '') {
