@@ -521,6 +521,19 @@ form textarea {
   background-color: #008000;
 }
 
+/* エラーメッセージ */
+#message {
+  margin-top: 40px;
+}
+
+.error {
+  color: red;
+  font-weight: bold; 
+  list-style: none;
+}
+
+
+
 /*------------------ クリックしたら Top画面に戻る部分---------------------*/
 #back {
   line-height: 80px;

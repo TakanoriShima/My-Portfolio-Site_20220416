@@ -115,13 +115,13 @@ $(function(){
   let contents = $('.content');
   // 表示画面の高さを取得
   const window_height = $(window).height();
-  console.log("ブラウザの window height:" + window_height + "px");
+  // console.log("ブラウザの window height:" + window_height + "px");
   
   // 0番目のcontent要素から非表示させる
   $.each(contents, (index, content) => {
     // 注目しているcontent要素のoffset(座標)を取得
     let offset = $(content).offset();
-    console.log(index + ": " + offset.top + "px");
+    // console.log(index + ": " + offset.top + "px");
     
     // そのcontent要素の座標がブラウザの表示領域にあるならば
     if(window_height > offset.top + 50) { // +50はAbout meコンテンツのための微調整
@@ -140,7 +140,7 @@ $(function(){
   $(window).scroll(function() {
     // 現在のスクロール量を取得
     let scroll_top = $(this).scrollTop();
-    console.log("現在のスクロール量: " + scroll_top + 'px');
+    // console.log("現在のスクロール量: " + scroll_top + 'px');
     
     // 一つ一つのcontent要素に対しての処理
     // .contentは計7個
@@ -198,6 +198,74 @@ $(function(){
   
   // fadein_fadeout関数の実行
   setInterval(fadein_fadeout, 4000);
+  
+  // Contactの入力、送信の設定
+  // Userクラスの作成
+  class User {
+    name; // 名前
+    email; // メール
+    comment; // コメント
+    // コンストラクタ
+    constructor(name, email, comment) {
+      this.name = name;
+      this.email = email;
+      this.comment = comment;
+    }
+    // 入力値を検証するメソッドの定義
+    validate() {
+      // 入力が正しいかどうかのフラッグ
+      let flag = true;
+      $('li').empty();
+      const ul = $('<ul>');
+      // もし名前が入力されていなければ
+      if(this.name === '') {
+        const e_name = $('<li>', {text: '※名前を入力してください'}).addClass('error');
+        ul.append(e_name);
+        $('#message').append(ul);
+        flag = false;
+      }
+      // もしメールが入力されていなければ
+      if(this.email === '') {
+        const e_email = $('<li>', {text: '※メールアドレスを入力してください'}).addClass('error');
+        ul.append(e_email);
+        $('#message').append(ul);
+        flag = false;
+      }
+      // もしコメントが入力されていなければ
+      if(this.comment === '') {
+        const e_comment = $('<li>', {text: '※コメントを入力してください'}).addClass('error');
+        ul.append(e_comment);
+        $('#message').append(ul);
+        flag = false;
+      }
+      return flag;
+    }
+  }
+  
+  // users配列を作成
+  const users = Array();
+  // users.push(new User('iwai', 'iwai@gmail.com', '面白いサイトでした。'));
+  // console.log(users);
+  
+  // 送信ボタンを押したときの処理
+  $('#btn').click(() => {
+    // 入力された値を取得
+    const name = $('input[name="name"]').val();
+    const email = $('input[name="email"]').val();
+    const comment = $('textarea[name="comment"]').val();
+    // 新しいユーザーを作成
+    const user = new User(name, email, comment);
+    // 入力値を検証(validateメソッドを実行)
+    const flag = user.validate();
+    if(flag === true) {
+      // ユーザー一覧に追加
+      users.push(user);
+      $('input[name="name"]').val('');
+      $('input[name="email"]').val('');
+      $('textarea[name="comment"]').val('');
+    }
+    console.log(users);
+  });
   
 });
 

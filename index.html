@@ -299,13 +299,15 @@
                 <p>このサイトを通して、私のことを少しでも知っていただけたのならうれしく思います。</p>
                 <p>もし、このサイトや私について何かコメントがありましたら、下記のフォームをご利用ください。</p>
                 
-                <form action="submit" method="POST">
+                <div id="message"></div>
+                <form>
                     Name: <input type="text" name="name" placeholder="田中  太郎"/><br><br>
                     Email: <input type="email" name="email" placeholder="sample@gmail.com">
                     <p>Comment</p>
                     <textarea name="comment" id="comment" cols="30" rows="10"></textarea><br>
                     <button id="btn">Send</button>
                 </form>
+                <div id="all"></div>
             </div>
             <div id="back">
                 <a href="index.html"><span class="material-icons">arrow_circle_up</span></a>
