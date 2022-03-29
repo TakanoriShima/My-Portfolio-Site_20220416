@@ -124,14 +124,14 @@ $(function(){
     console.log(index + ": " + offset.top + "px");
     
     // そのcontent要素の座標がブラウザの表示領域にあるならば
-    if(window_height > offset.top + 100) { // +200はAbout meコンテンツのための微調整
+    if(window_height > offset.top + 50) { // +50はAbout meコンテンツのための微調整
       // 表示
       $(content).css({'opacity': '1'});
     } else {
       // 30px下げて非表示
       $(content).css({
         'opacity': '0',
-        'marginTop': '30px'
+        'marginTop': '20px'
       });
     }
   });
@@ -148,37 +148,28 @@ $(function(){
       // 注目しているcontent要素のoffset(座標)を取得
       let offset = $(content).offset();
       
-      // 各content要素のtop座標が、スクロール量+100より小さいときに表示
-      if(offset.top < scroll_top + 200) {
+      // 各content要素のtop座標が、スクロール量+50より小さいときに表示
+      if(offset.top < scroll_top + 50) {
         // 1秒かけてふわっと上がるような感じで各contentを出現させる。
         $(content).animate({
           'opacity':'1',
-          'marginTop':'-30px'
+          'marginTop':'-20px'
         }, 300);
       }
     });
   });
   
-  // Portfolioコンテンツのモーダルウィンドウ
-  const open_2 = document.getElementById('open_2');
-  const close_2 = document.getElementById('close_2');
-  const modal = document.getElementById('modal');
-  const mask = document.getElementById('mask');
-  
-  // 詳細をクリックしてモーダルウィンドウを表示
+  // My portfolioのモーダルウインドウ
+  // 画像をクリックしてモーダルウィンドウを表示
   $('#open_2').on('click' , () => {
    $('#modal').removeClass('hidden')
    $('#mask').removeClass('hidden');
   });
   
-  // 閉じるをクリックして元の画面に戻す。
+  // closeをクリックしてモーダルウィンドウを閉じ、元の画面に戻す。
    $('#close_2').on('click' , () => {
    $('#modal').addClass('hidden')
    $('#mask').addClass('hidden');
-  });
-  // maskもクリックして元の画面に戻せるようにする。
-   $('#mask').on('click' , () => {
-   $('#close_2').on();
   });
   
   // hobbyの料理写真のアニメーション(fadein/fadeout)

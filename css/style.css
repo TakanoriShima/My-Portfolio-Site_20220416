@@ -382,7 +382,7 @@ a .box:hover {
   padding: 40px 20px;
   border-radius: 10px;
   position: fixed;
-  top: 130px;
+  top: 110px;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -408,7 +408,7 @@ a .box:hover {
   width: 100px;
   padding: 10px 10px;
   border: 2px solid #005500;
-  margin: 40px auto 0;
+  margin: 0 auto;
   border-radius: 4px;
 }
 
