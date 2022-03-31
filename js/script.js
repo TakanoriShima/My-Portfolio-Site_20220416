@@ -1,12 +1,7 @@
 /* global $ */
 
 $(function(){
-  
-  // スマホ版のハンバーガーメニュー
-  const open = $('#open').text();
-  const overlay = $('overlay').text();
-  const close = $('#close');
-  
+  // ハンバーガーメニュー処理
   // メニューバーをクリックして表示させる処理
   $('#open').on('click' , () => {
     $('.overlay').show();
