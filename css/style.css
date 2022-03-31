@@ -537,14 +537,10 @@ form textarea {
 /*------------------ クリックしたら Top画面に戻る部分---------------------*/
 #back {
   line-height: 80px;
-  
   background: #99CC00;
   width: 100%;
 }
 
-span.material-icons {
-  margin-top: 40px;
-}
 
 #back a span.material-icons {
   font-size: 50px;
@@ -554,7 +550,6 @@ span.material-icons {
 
 #back span.material-icons a:hover {
   cursor: pointer;
-  opacity: 0.5;
 }
 
 #back p {

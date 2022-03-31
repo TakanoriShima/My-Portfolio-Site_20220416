@@ -128,7 +128,7 @@ $(function(){
       // 表示
       $(content).css({'opacity': '1'});
     } else {
-      // 30px下げて非表示
+      // 非表示
       $(content).css({'opacity': '0'});
     }
   });
@@ -145,8 +145,8 @@ $(function(){
       // 注目しているcontent要素のoffset(座標)を取得
       let offset = $(content).offset();
       
-      // 各content要素のtop座標が、スクロール量+100より小さいときに表示
-      if(offset.top < scroll_top + 100) {
+      // 各content要素のtop座標が、スクロール量+400より小さいときに表示
+      if(offset.top < scroll_top + 400) {
         // 1秒かけてふわっと上がるような感じで各contentを出現させる。
         $(content).animate({'opacity':'1',}, 300);
       }
@@ -238,8 +238,6 @@ $(function(){
   
   // users配列を作成
   const users = Array();
-  // users.push(new User('iwai', 'iwai@gmail.com', '面白いサイトでした。'));
-  // console.log(users);
   
   // 送信ボタンを押したときの処理
   $('#btn').click(() => {
