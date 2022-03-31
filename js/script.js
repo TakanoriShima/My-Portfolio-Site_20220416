@@ -6,20 +6,20 @@ $(function(){
   $('#open').on('click' , () => {
     $('.overlay').show();
     $('.overlay').addClass('show');
-    $('#open').addClass('hide');
+    $('#open').hide();
   });
   
   // メニューバーをクリックして閉じるときの処理
   $('#close').on('click' , () => {
     $('.overlay').removeClass('show');
-    $('#open').removeClass('hide');
+    $('#open').show();
   });
   
   // ハンバーガーメニュー中にリンクをクリックしたときに、ハンバーガーメニューを閉じる処理
   $('.overlay a').on('click', () => {
     $('.overlay').removeClass('show');
     $('.overlay').hide();
-    $('#open').removeClass('hide');
+    $('#open').show();
   });
   
   // 福岡の画像アニメーション(slider)
@@ -140,7 +140,7 @@ $(function(){
       // 注目しているcontent要素のoffset(座標)を取得
       let offset = $(content).offset();
       
-      // 各content要素のtop座標が、スクロール量より小さいときに表示
+      // 各content要素のtop座標が、スクロール量+400より小さいときに表示
       if(offset.top < scroll_top + 400) {
         // 1秒かけてふわっと上がるような感じで各contentを出現させる。
         $(content).animate({'opacity':'1',}, 300);
@@ -189,8 +189,8 @@ $(function(){
   setInterval(fadein_fadeout, 4000);
   
   // Contactの入力、送信の設定
-  // Userクラスの作成
-  class User {
+  // Messageクラスの作成
+  class Messsage {
     name; // 名前
     email; // メール
     comment; // コメント
@@ -231,27 +231,48 @@ $(function(){
     }
   }
   
-  // users配列を作成
-  const users = Array();
-  
   // 送信ボタンを押したときの処理
-  $('#btn').click(() => {
+  $('#btn').click((e) => {
+      e.preventDefault(); // 画面が更新されないように
     // 入力された値を取得
     const name = $('input[name="name"]').val();
     const email = $('input[name="email"]').val();
     const comment = $('textarea[name="comment"]').val();
     // 新しいユーザーを作成
-    const user = new User(name, email, comment);
+    const message = new Message(name, email, comment);
     // 入力値を検証(validateメソッドを実行)
-    const flag = user.validate();
+    const flag = message.validate();
     if(flag === true) {
-      // ユーザー一覧に追加
-      users.push(user);
+      
       $('input[name="name"]').val('');
       $('input[name="email"]').val('');
       $('textarea[name="comment"]').val('');
+      
+      // メール送信
+      $.ajax({
+         type: 'post',
+         url: 'send_mail.php',
+         datatype: 'json',
+         data: {
+             name: message.name, // 名前
+             email: message.email, // メールアドレス
+             comment: message.comment // コメント
+         }
+      }).done(function(data) { // ajax通信が成功したら
+        console.log(data);
+        //送信に成功したならば
+        if (data['result']) {
+            // メール「送信」に成功したときの処理
+            // 画面にメッセージを表示、画面をリロードなど
+            $('.hw').after($('<p>', {text: '送信を完了しました'}).css('color', 'green'));
+        } else {
+            // メール送信に「失敗」した時の処理
+            // 画面にメッセージを表示など
+            $('.hw').after($('<p>', {text: '送信に失敗しました'}).css('color', 'red'));
+        }
+      });
     }
-    console.log(users);
+    
   });
   
 });
