@@ -13,7 +13,7 @@
     $sbject = $name . '様からのお問い合わせです'; // メールの通知内容
     
     // 文字化け対策
-    mb_language("Japanese");
+    mb_language("English");
     mb_internal_encoding("UTF-8");
     
     // メール送信

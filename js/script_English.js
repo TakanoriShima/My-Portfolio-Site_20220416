@@ -4,7 +4,6 @@ $(function(){
   // ハンバーガーメニュー処理
   // メニューバーをクリックして表示させる処理
   $('#open').on('click' , () => {
-    $('.overlay').show();
     $('.overlay').addClass('show');
     $('#open').addClass('hide');
   });
@@ -18,7 +17,6 @@ $(function(){
   // ハンバーガーメニュー中にリンクをクリックしたときに、ハンバーガーメニューを閉じる処理
   $('.overlay a').on('click', () => {
     $('.overlay').removeClass('show');
-    $('.overlay').hide();
     $('#open').removeClass('hide');
   });
   
@@ -112,7 +110,7 @@ $(function(){
   const window_height = $(window).height();
   // console.log("ブラウザの window height:" + window_height + "px");
   
-  // 0番目のcontent要素から非表示させる
+  // 0番目のcontent要素から取得
   $.each(contents, (index, content) => {
     // 注目しているcontent要素のoffset(座標)を取得
     let offset = $(content).offset();
@@ -123,7 +121,7 @@ $(function(){
       // 表示
       $(content).css({'opacity': '1'});
     } else {
-      // 非表示
+      // 30px下げて非表示
       $(content).css({'opacity': '0'});
     }
   });
@@ -189,8 +187,8 @@ $(function(){
   setInterval(fadein_fadeout, 4000);
   
   // Contactの入力、送信の設定
-  // Userクラスの作成
-  class User {
+  // Messageクラスの作成
+  class Message {
     name; // 名前
     email; // メール
     comment; // コメント
@@ -208,21 +206,21 @@ $(function(){
       const ul = $('<ul>');
       // もし名前が入力されていなければ
       if(this.name === '') {
-        const e_name = $('<li>', {text: 'Please enter your name.'}).addClass('error');
+        const e_name = $('<li>', {text: '※Plese enter your name.'}).addClass('error');
         ul.append(e_name);
         $('#message').append(ul);
         flag = false;
       }
       // もしメールが入力されていなければ
       if(this.email === '') {
-        const e_email = $('<li>', {text: 'Please enter your email address.'}).addClass('error');
+        const e_email = $('<li>', {text: '※Plese enter your email address.'}).addClass('error');
         ul.append(e_email);
         $('#message').append(ul);
         flag = false;
       }
       // もしコメントが入力されていなければ
       if(this.comment === '') {
-        const e_comment = $('<li>', {text: 'Please enter your comments.'}).addClass('error');
+        const e_comment = $('<li>', {text: '※Plese enter your commnets.'}).addClass('error');
         ul.append(e_comment);
         $('#message').append(ul);
         flag = false;
@@ -231,27 +229,46 @@ $(function(){
     }
   }
   
-  // users配列を作成
-  const users = Array();
-  
   // 送信ボタンを押したときの処理
-  $('#btn').click(() => {
+  $('#btn').click((e) => {
+      e.preventDefault(); // 画面が更新されないように
     // 入力された値を取得
     const name = $('input[name="name"]').val();
     const email = $('input[name="email"]').val();
     const comment = $('textarea[name="comment"]').val();
     // 新しいユーザーを作成
-    const user = new User(name, email, comment);
+    const message = new Message(name, email, comment);
     // 入力値を検証(validateメソッドを実行)
-    const flag = user.validate();
+    const flag = message.validate();
     if(flag === true) {
-      // ユーザー一覧に追加
-      users.push(user);
       $('input[name="name"]').val('');
       $('input[name="email"]').val('');
       $('textarea[name="comment"]').val('');
+      
+      // メール送信
+      $.ajax({
+         type: 'post',
+         url: 'send_mail_English.php',
+         datatype: 'json',
+         data: {
+             name: message.name, // 名前
+             email: message.email, // メールアドレス
+             comment: message.comment // コメント
+         }
+      }).done(function(data) { // ajax通信が成功したら
+        console.log(data);
+        //送信に成功したならば
+        if (data['result']) {
+            // メール「送信」に成功したときの処理
+            // 画面にメッセージを表示、画面をリロードなど
+            $('.hw').after($('<p>', {text: 'Transmission completed.'}).addClass('send'));
+        } else {
+            // メール送信に「失敗」した時の処理
+            // 画面にメッセージを表示
+            $('.hw').after($('<p>', {text: 'Transmission failed.'}).addClass('error'));
+        }
+      });
     }
-    console.log(users);
   });
   
 });

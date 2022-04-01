@@ -13,7 +13,7 @@ body {
 
 
 /*------------------- スマホ版でのメニュー表示 ----------------*/
-@media(max-width:420px) {
+@media(max-width:500px) {
   .pc-gnav{
     display: none;
   }
@@ -31,7 +31,7 @@ body {
   }
 
   .m-menu #open.hide {
-    display: none;
+    opacity: 0;
   }
   
   .overlay {
@@ -235,12 +235,12 @@ div #slider {
 
 /* ナビをクリックしたときの位置調整 */
 .contents {
-  padding-top: 85px;
+  padding-top: 100px;
 }
 
 .content {
-  padding-top: 175px;
-  margin-top: -140px;
+  padding-top: 130px;
+  margin-top: -130px;
   
 }
 
@@ -382,7 +382,7 @@ a .box:hover {
   padding: 40px 20px;
   border-radius: 10px;
   position: fixed;
-  top: 110px;
+  top: 230px;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -528,6 +528,14 @@ form textarea {
 
 .error {
   color: red;
+  font-weight: bold; 
+  list-style: none;
+}
+
+/* 送信成功メッセージ */
+
+.send {
+  color: green;
   font-weight: bold; 
   list-style: none;
 }

@@ -4,22 +4,20 @@ $(function(){
   // ハンバーガーメニュー処理
   // メニューバーをクリックして表示させる処理
   $('#open').on('click' , () => {
-    $('.overlay').show();
     $('.overlay').addClass('show');
-    $('#open').hide();
+    $('#open').addClass('hide');
   });
   
   // メニューバーをクリックして閉じるときの処理
   $('#close').on('click' , () => {
     $('.overlay').removeClass('show');
-    $('#open').show();
+    $('#open').removeClass('hide');
   });
   
   // ハンバーガーメニュー中にリンクをクリックしたときに、ハンバーガーメニューを閉じる処理
   $('.overlay a').on('click', () => {
     $('.overlay').removeClass('show');
-    $('.overlay').hide();
-    $('#open').show();
+    $('#open').removeClass('hide');
   });
   
   // 福岡の画像アニメーション(slider)
@@ -112,7 +110,7 @@ $(function(){
   const window_height = $(window).height();
   // console.log("ブラウザの window height:" + window_height + "px");
   
-  // 0番目のcontent要素から非表示させる
+  // 0番目のcontent要素から取得
   $.each(contents, (index, content) => {
     // 注目しているcontent要素のoffset(座標)を取得
     let offset = $(content).offset();
@@ -190,7 +188,7 @@ $(function(){
   
   // Contactの入力、送信の設定
   // Messageクラスの作成
-  class Messsage {
+  class Message {
     name; // 名前
     email; // メール
     comment; // コメント
@@ -243,7 +241,6 @@ $(function(){
     // 入力値を検証(validateメソッドを実行)
     const flag = message.validate();
     if(flag === true) {
-      
       $('input[name="name"]').val('');
       $('input[name="email"]').val('');
       $('textarea[name="comment"]').val('');
@@ -264,15 +261,14 @@ $(function(){
         if (data['result']) {
             // メール「送信」に成功したときの処理
             // 画面にメッセージを表示、画面をリロードなど
-            $('.hw').after($('<p>', {text: '送信を完了しました'}).css('color', 'green'));
+            $('.hw').after($('<p>', {text: '送信を完了しました'}).addClass('send'));
         } else {
             // メール送信に「失敗」した時の処理
-            // 画面にメッセージを表示など
-            $('.hw').after($('<p>', {text: '送信に失敗しました'}).css('color', 'red'));
+            // 画面にメッセージを表示
+            $('.hw').after($('<p>', {text: '送信に失敗しました'}).addClass('error'));
         }
       });
     }
-    
   });
   
 });
