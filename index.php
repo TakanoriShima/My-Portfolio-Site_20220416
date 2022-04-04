@@ -300,7 +300,7 @@
                 <!--エラーメッセージ-->
                 <div id="message"></div>
                 <!--入力フォーム-->
-                <form>
+                <form action="send_mail.php" method="POST">
                     Name: <input type="text" name="name" placeholder="田中  太郎"/><br><br>
                     Email: <input type="email" name="email" placeholder="sample@gmail.com">
                     <p>Comment</p>

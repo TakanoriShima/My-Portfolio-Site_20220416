@@ -28,6 +28,7 @@ body {
     left: 0px;
     background: #fff;
     outline: 1px solid black;
+    z-index: 100;
   }
 
   .m-menu #open.hide {

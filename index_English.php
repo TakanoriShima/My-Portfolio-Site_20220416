@@ -302,7 +302,7 @@
                 <!--Error message-->
                 <div id="message"></div>
                 <!--Input form-->
-                <form action="" method="">
+                <form action="send_mail_English" method="POST">
                     Name: <input type="text" name="name" placeholder="Taro Tanaka"/><br><br>
                     Email: <input type="email" name="email" placeholder="sample@gmail.com">
                     <p>Comment</p>

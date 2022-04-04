@@ -14,7 +14,7 @@ $(function(){
     $('#open').removeClass('hide');
   });
   
-  // ハンバーガーメニュー中にリンクをクリックしたときに、ハンバーガーメニューを閉じる処理
+  // // ハンバーガーメニュー中のリンクをクリックしたときに、メニューを閉じる処理
   $('.overlay a').on('click', () => {
     $('.overlay').removeClass('show');
     $('#open').removeClass('hide');

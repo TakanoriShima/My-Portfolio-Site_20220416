@@ -17,6 +17,7 @@
     mb_internal_encoding("UTF-8");
     
     // メール送信
+    // mb_send_mail(送信先,タイトル,本文,追加ヘッダー)
     $result = mb_send_mail($to, $sbject, $comment, "From:" . $from);
     
     // メール送信結果を判定し、Ajaxに配列をreturn
