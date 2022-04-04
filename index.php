@@ -106,9 +106,11 @@
                 <div id="mask" class="hidden"></div>
                 <div id="modal" class="hidden">
                     <div id="close_2">閉じる</div>
-                    <p><a href="">1. アニメーション(jQuery)</a></p>
-                    <p><a href="">2. 新規ユーザー登録アプリ(PHP, MySQL)</a></p>
-                    <p><a href="">3. facebookもどきのアプリ(PHP, MySQL)</a></p>
+                    <p><a href="https://kazuma9976.github.io/Typing-Game/">1. タイピングゲーム(Javascript)</a></p>
+                    <p><a href="https://kazuma9976.github.io/jQuery_animation/">2. アニメーション(jQuery)</a></p>
+                    <p><a href="https://kazuma9976.github.io/jQuery_Practice-DOM-manipulation/">3. DOM操作(jQuery)</a></p>
+                    <p><a href="">4. 新規ユーザー登録アプリ(PHP, MySQL)</a></p>
+                    <p><a href="">5. facebookもどきのアプリ(PHP, MySQL)</a></p>
                 </div>
             </div>
             

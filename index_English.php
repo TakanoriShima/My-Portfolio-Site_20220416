@@ -107,9 +107,11 @@
                 <div id="mask" class="hidden"></div>
                 <div id="modal" class="hidden">
                     <div id="close_2">Close</div>
-                    <p><a href="">1. Animation (jQuery)</a></p>
-                    <p><a href="">2. New user registration application (PHP, MySQL)</a></p>
-                    <p><a href="">3. Facebook-like application<br>(PHP, MySQL)</a></p>
+                    <p><a href="https://kazuma9976.github.io/Typing-Game/">1. Typing game (Javascript)</a></p>
+                    <p><a href="https://kazuma9976.github.io/jQuery_animation/">2. Animation (jQuery)</a></p>
+                    <p><a href="https://kazuma9976.github.io/jQuery_Practice-DOM-manipulation/">3. DOM Manipulation (jQuery)</a></p>
+                    <p><a href="">4. New user registration application (PHP, MySQL)</a></p>
+                    <p><a href="">5. Facebook-like application<br>(PHP, MySQL)</a></p>
                 </div>
             </div>
             
