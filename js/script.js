@@ -231,7 +231,9 @@ $(function(){
   
   // 送信ボタンを押したときの処理
   $('#btn').click((e) => {
-      e.preventDefault(); // 画面が更新されないように
+    e.preventDefault(); // 画面が更新されないようにする
+    // メッセージをリセット
+    $('.hw+p').remove();
     // 入力された値を取得
     const name = $('input[name="name"]').val();
     const email = $('input[name="email"]').val();
