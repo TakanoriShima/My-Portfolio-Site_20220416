@@ -89,7 +89,7 @@
                 <p>2021年8月末に退職し、結婚を機に11月末に福岡県へ移住。</p>
                 <p>前職を経験する中で、DX化の推進に興味を持つ。</p>
                 <p>Webエンジニアへの転職を志す。</p>
-                <p>2021年12月より侍エンジニアを受講開始。</p><br>
+                <p>2021年12月より侍エンジニア塾を受講開始。</p><br>
                 <p id="git">GitHubのURLはこちらをクリック↓↓</p>
                 <a href="https://github.com/kazuma9976"><div class="box"></div></a>
             </div>
@@ -97,7 +97,7 @@
             <!--ポートフォリオサイトについて-->
             <div id="works" class="content">
                 <div class="h">My portfolio</div>
-                <p>侍エンジニア受講中に作成した成果物たちです</p>
+                <p>侍エンジニア塾の受講期間中に作成した成果物たちです !!</p>
                 <p>こちらをクリック↓↓</p>
                 <div id="open_2">
                     <img class="object" src="images/work.jpg" alt="制作物の画像">
@@ -106,11 +106,28 @@
                 <div id="mask" class="hidden"></div>
                 <div id="modal" class="hidden">
                     <div id="close_2">閉じる</div>
-                    <p><a href="https://kazuma9976.github.io/Typing-Game/">1. タイピングゲーム(Javascript)</a></p>
-                    <p><a href="https://kazuma9976.github.io/jQuery_animation/">2. アニメーション(jQuery)</a></p>
-                    <p><a href="https://kazuma9976.github.io/jQuery_Practice-DOM-manipulation/">3. DOM操作(jQuery)</a></p>
-                    <p><a href="">4. 新規ユーザー登録アプリ(PHP, MySQL)</a></p>
-                    <p><a href="">5. facebookもどきのアプリ(PHP, MySQL)</a></p>
+                    <table class="table table-bordered table-striped mt-3">
+                        <tr>
+                            <th>タイトル</th>
+                            <th>ソースコード</th>
+                            <th>Webに公開したもの</th>
+                        </tr>
+                        <tr>
+                            <td>タイピングゲーム(Javascript)</td>
+                            <td><a href="https://github.com/kazuma9976/Typing-Game.git">GitHub</a></td>
+                            <td><a href="https://kazuma9976.github.io/Typing-Game/">GitHub Pages</a></td>
+                        </tr>
+                        <tr>
+                            <td>DOM操作(jQuery)</td>
+                            <td><a href="https://github.com/kazuma9976/jQuery_Practice-DOM-manipulation.git">GitHub</a></td>
+                            <td><a href="https://kazuma9976.github.io/jQuery_Practice-DOM-manipulation/">GitHub Pages</a></td>
+                        </tr>
+                        <tr>
+                            <td>アニメーション(jQuery)</td>
+                            <td><a href="https://github.com/kazuma9976/jQuery_animation.git">GitHub</a></td>
+                            <td><a href="https://kazuma9976.github.io/jQuery_animation/">GitHub Pages</a></td>
+                        </tr>
+                    </table>
                 </div>
             </div>
             

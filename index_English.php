@@ -98,7 +98,7 @@
             <!--My portfolio-->
             <div id="works" class="content">
                 <div class="h">My portfolio</div>
-                <p>Here are some of the products I created while attending the Samurai Engineer School !!</p>
+                <p>These are the products created during the course of the Samurai Engineer School !!</p>
                 <p>Click here↓↓</p>
                 <div id="open_2">
                     <img class="object" src="images/work.jpg" alt="Images of productions">
@@ -107,11 +107,28 @@
                 <div id="mask" class="hidden"></div>
                 <div id="modal" class="hidden">
                     <div id="close_2">Close</div>
-                    <p><a href="https://kazuma9976.github.io/Typing-Game/">1. Typing game (Javascript)</a></p>
-                    <p><a href="https://kazuma9976.github.io/jQuery_animation/">2. Animation (jQuery)</a></p>
-                    <p><a href="https://kazuma9976.github.io/jQuery_Practice-DOM-manipulation/">3. DOM Manipulation (jQuery)</a></p>
-                    <p><a href="">4. New user registration application (PHP, MySQL)</a></p>
-                    <p><a href="">5. Facebook-like application<br>(PHP, MySQL)</a></p>
+                    <table class="table table-bordered table-striped mt-3">
+                        <tr>
+                            <th>Title</th>
+                            <th>Source code</th>
+                            <th>Published on the Web</th>
+                        </tr>
+                        <tr>
+                            <td>Typing game (Javascript)</td>
+                            <td><a href="https://github.com/kazuma9976/Typing-Game.git">GitHub</a></td>
+                            <td><a href="https://kazuma9976.github.io/Typing-Game/">GitHub Pages</a></td>
+                        </tr>
+                        <tr>
+                            <td>DOM Manipulation (jQuery)</td>
+                            <td><a href="https://github.com/kazuma9976/jQuery_Practice-DOM-manipulation.git">GitHub</a></td>
+                            <td><a href="https://kazuma9976.github.io/jQuery_Practice-DOM-manipulation/">GitHub Pages</a></td>
+                        </tr>
+                        <tr>
+                            <td>Animation (jQuery)</td>
+                            <td><a href="https://github.com/kazuma9976/jQuery_animation.git">GitHub</a></td>
+                            <td><a href="https://kazuma9976.github.io/jQuery_animation/">GitHub Pages</a></td>
+                        </tr>
+                    </table>
                 </div>
             </div>
             
