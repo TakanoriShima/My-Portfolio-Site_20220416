@@ -9,7 +9,7 @@
     
     // HP作成者へのメール送信処理
     $from = $email; // 送信者のメールアドレス
-    $to = 'happyday.kazuma@outlook.jp'; // HP作成者のメールアドレス
+    $to = 'samurai.portfolio@gmail.com'; // HP作成者のメールアドレス
     $sbject = $name . '様からのお問い合わせです'; // メールの通知内容
     
     // 文字化け対策
