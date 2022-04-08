@@ -128,6 +128,11 @@
                             <td><a href="https://github.com/kazuma9976/jQuery_animation.git">GitHub</a></td>
                             <td><a href="https://kazuma9976.github.io/jQuery_animation/">GitHub Pages</a></td>
                         </tr>
+                        <tr>
+                            <td>Simple user registration application (PHP, MySQL)</td>
+                            <td><a href="https://github.com/kazuma9976/PHP_users.git">GitHub</a></td>
+                            <td><a href="https://samurai-php-users.herokuapp.com/">Heroku</a></td>
+                        </tr>
                     </table>
                 </div>
             </div>
@@ -152,7 +157,7 @@
                             </tr>
                             <tr class="table-success">
                                 <td>Javascript/jQuery</td>
-                                <td>2 months</td>
+                                <td>3 months</td>
                                 <td class="star">★★</td>
                             </tr>
                             <tr>
@@ -162,13 +167,13 @@
                             </tr>
                             <tr class="table-success">
                                 <td>MySQL</td>
-                                <td>1 month</td>
-                                <td class="star">★</td>
+                                <td>2 month</td>
+                                <td class="star">★★</td>
                             </tr>
                             <tr>
                                 <td>Bootstrap</td>
-                                <td>1 month</td>
-                                <td class="star">★</td>
+                                <td>2 month</td>
+                                <td class="star">★★</td>
                             </tr>
                         </table>
                     </div>
