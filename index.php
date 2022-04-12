@@ -329,7 +329,7 @@
                     Email: <input type="email" name="email" placeholder="sample@gmail.com">
                     <p>Comment</p>
                     <textarea name="comment" id="comment" cols="30" rows="10"></textarea><br>
-                    <button type="button" id="btn">Send</button>
+                    <button type="button" id="btn" onclick="return confirm('本当に送信しますか?')">Send</button>
                 </form>
             </div>
             <!--クリックしたらTop画面に戻る-->
