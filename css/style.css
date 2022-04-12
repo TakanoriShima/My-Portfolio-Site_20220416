@@ -290,8 +290,10 @@ div #slider {
 }
 
 .myface {
-  width: 100px;
-  height: 120px;
+  width: 120px;
+  height: 160px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #444444;
   margin-bottom: 30px;
 }
 
