@@ -220,7 +220,7 @@ $(function(){
       }
       // もしコメントが入力されていなければ
       if(this.comment === '') {
-        const e_comment = $('<li>', {text: '※Plese enter your commnets.'}).addClass('error');
+        const e_comment = $('<li>', {text: '※Plese enter your comments'}).addClass('error');
         ul.append(e_comment);
         $('#message').append(ul);
         flag = false;
@@ -243,33 +243,39 @@ $(function(){
     // 入力値を検証(validateメソッドを実行)
     const flag = message.validate();
     if(flag === true) {
-      $('input[name="name"]').val('');
-      $('input[name="email"]').val('');
-      $('textarea[name="comment"]').val('');
       
-      // メール送信
-      $.ajax({
-         type: 'post',
-         url: 'send_mail_English.php',
-         datatype: 'json',
-         data: {
-             name: message.name, // 名前
-             email: message.email, // メールアドレス
-             comment: message.comment // コメント
-         }
-      }).done(function(data) { // ajax通信が成功したら
-        console.log(data);
-        //送信に成功したならば
-        if (data['result']) {
-            // メール「送信」に成功したときの処理
-            // 画面にメッセージを表示、画面をリロードなど
-            $('.hw').after($('<p>', {text: 'Transmission completed.'}).addClass('send'));
-        } else {
-            // メール送信に「失敗」した時の処理
-            // 画面にメッセージを表示
-            $('.hw').after($('<p>', {text: 'Transmission failed.'}).addClass('error'));
-        }
-      });
+      // 入力値が正しかった時にconfirmを表示させる。
+      const send_flag = confirm('Are you sure you want to send it?');
+      if(send_flag === true) {
+        
+        $('input[name="name"]').val('');
+        $('input[name="email"]').val('');
+        $('textarea[name="comment"]').val('');
+        
+        // メール送信
+        $.ajax({
+           type: 'post',
+           url: 'send_mail.php',
+           datatype: 'json',
+           data: {
+               name: message.name, // 名前
+               email: message.email, // メールアドレス
+               comment: message.comment // コメント
+           }
+        }).done(function(data) { // ajax通信が成功したら
+          console.log(data);
+          //送信に成功したならば
+          if (data['result']) {
+              // メール「送信」に成功したときの処理
+              // 画面にメッセージを表示、画面をリロードなど
+              $('.hw').after($('<p>', {text: 'Transmission completed.'}).addClass('send'));
+          } else {
+              // メール送信に「失敗」した時の処理
+              // 画面にメッセージを表示
+              $('.hw').after($('<p>', {text: 'Transmission failed.'}).addClass('error'));
+          }
+        });
+      }
     }
   });
   
