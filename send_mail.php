@@ -12,7 +12,7 @@
     $date = date("Y年m月d日 H時i分s秒");
     
     //サイトを見てフォームを記入した人への自動返信メール
-    $mailto = $request_param['email'];
+    $mailto = $email;
     $to = 'メールを受け付けるメールアドレスを入力'; 
     $mailfrom = "From:samurai.portfolio@gmail.com"; 
     $subject = "お問い合わせ有難うございます。";
