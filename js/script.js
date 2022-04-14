@@ -36,11 +36,11 @@ $(function(){
   });
   
   // 配列の1,2,3,4番目を隠した状態にする。
-  $('#slider img').eq(1).css('margin-left', '-400px');
-  $('#slider img').eq(2).css('margin-left', '-400px');
-  $('#slider img').eq(3).css('margin-left', '-400px');
-  $('#slider img').eq(4).css('margin-left', '-400px');
-  $('#slider img').eq(5).css('margin-left', '-400px');
+  $('#slider img').eq(1).css('margin-left', '-370px');
+  $('#slider img').eq(2).css('margin-left', '-370px');
+  $('#slider img').eq(3).css('margin-left', '-370px');
+  $('#slider img').eq(4).css('margin-left', '-370px');
+  $('#slider img').eq(5).css('margin-left', '-370px');
   
   let s_count = 0;
   
@@ -48,12 +48,12 @@ $(function(){
   const slider = () => {
     $.when(
       
-        $('#slider img').eq(s_count % 6).animate({marginLeft: '400'}, 2000),
+        $('#slider img').eq(s_count % 6).animate({marginLeft: '370'}, 2000),
         $('#slider img').eq((s_count + 1) % 6).animate({marginLeft: '0px'}, 2000),
         
     ).done(
         () => {
-            $('#slider img').eq(s_count % 6).css('margin-left', '-400px');
+            $('#slider img').eq(s_count % 6).css('margin-left', '-370px');
         }
     ).done(
         () => {
@@ -108,20 +108,16 @@ $(function(){
   let contents = $('.content');
   // 表示画面の高さを取得
   const window_height = $(window).height();
-  // console.log("ブラウザの window height:" + window_height + "px");
-  
   // 0番目のcontent要素から取得
   $.each(contents, (index, content) => {
     // 注目しているcontent要素のoffset(座標)を取得
     let offset = $(content).offset();
-    // console.log(index + ": " + offset.top + "px");
-    
     // そのcontent要素の座標がブラウザの表示領域にあるならば
     if(window_height > offset.top) {
       // 表示
       $(content).css({'opacity': '1'});
     } else {
-      // 30px下げて非表示
+      // 非表示
       $(content).css({'opacity': '0'});
     }
   });
@@ -130,8 +126,6 @@ $(function(){
   $(window).scroll(function() {
     // 現在のスクロール量を取得
     let scroll_top = $(this).scrollTop();
-    // console.log("現在のスクロール量: " + scroll_top + 'px');
-    
     // 一つ一つのcontent要素に対しての処理
     // .contentは計7個
     $.each(contents , (index, content) => { 
@@ -140,7 +134,7 @@ $(function(){
       
       // 各content要素のtop座標が、スクロール量+400より小さいときに表示
       if(offset.top < scroll_top + 400) {
-        // 1秒かけてふわっと上がるような感じで各contentを出現させる。
+        // 0.3秒かけてふわっと表示する感じで各contentを出現させる。
         $(content).animate({'opacity':'1',}, 300);
       }
     });
@@ -263,7 +257,6 @@ $(function(){
                comment: message.comment // コメント
            }
         }).done(function(data) { // ajax通信が成功したら
-          console.log(data);
           //送信に成功したならば
           if (data['result']) {
               // メール「送信」に成功したときの処理
