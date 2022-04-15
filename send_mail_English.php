@@ -35,15 +35,15 @@
     
     // サイト管理者確認用メール(Iwaiあて)
     // 代入演算子、改行文字を使って自動メールのフォーマットを作成
-    $subject2 = "お問い合わせがありました。";
+    $subject2 = "An inquiry has been received.";
     $content2 = "";
-    $content2 .= "お問い合わせがありました。\r\n";
-    $content2 .= "お問い合わせ内容は下記通りです。\r\n";
+    $content2 .= "An inquiry has been received.\r\n";
+    $content2 .= "Below are the contents.\r\n";
     $content2 .= "=================================\r\n";
-    $content2 .= "お名前: " . $name . "\r\n";
-    $content2 .= "メールアドレス:   " . $email . "\r\n";
-    $content2 .= "コメント: " . $comment . "\r\n";
-    $content2 .= "お問い合わせ日時:   " . $date . "\r\n";
+    $content2 .= "Name: " . $name . "\r\n";
+    $content2 .= "Email:   " . $email . "\r\n";
+    $content2 .= "Comment: " . $comment . "\r\n";
+    $content2 .= "Inquiry date and time:   " . $date . "\r\n";
     $content2 .= "=================================" . "\r\n";
     
     // 文字化け対策
