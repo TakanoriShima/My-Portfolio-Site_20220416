@@ -14,7 +14,7 @@
     $w = date("w");
     $week_name = array("Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat");
     // お問い合わせ日時の詳細設定
-    $date = date("Y/m/d H:i:s"."($week_name[$w])");
+    $date = date("Y/m/d " . "($week_name[$w])" . " H:i:s");
     
     //サイトを見てフォームを記入した人への自動返信メール
     $mailto = $email;
