@@ -249,7 +249,7 @@ $(function(){
         // メール送信
         $.ajax({
            type: 'post',
-           url: 'send_mail.php',
+           url: 'send_mail_English.php',
            datatype: 'json',
            data: {
                name: message.name, // 名前
@@ -260,12 +260,24 @@ $(function(){
           //送信に成功したならば
           if (data['result']) {
               // メール「送信」に成功したときの処理
-              // 画面にメッセージを表示、画面をリロードなど
-              $('.hw').after($('<p>', {text: 'Transmission completed.'}).addClass('send'));
+              // 3秒後にContactページを再表示
+              $(window).load(function() {
+                setTimeout(function(){
+                  window.location.href = 'http://ksamurai.php.xdomain.jp/Portfolio/index_English.php#contact';
+                  // 画面にメッセージを表示
+                  $('.hw').after($('<p>', {text: 'Transmission completed.'}).addClass('send'));
+                }, 3000);
+              });
           } else {
               // メール送信に「失敗」した時の処理
-              // 画面にメッセージを表示
-              $('.hw').after($('<p>', {text: 'Transmission failed.'}).addClass('error'));
+              // 3秒後にContactページを表示
+              $(window).load(function() {
+                setTimeout(function(){
+                  window.location.href = 'http://ksamurai.php.xdomain.jp/Portfolio/index_English.php#contact';
+                  // 画面にメッセージを表示、画面をリロードなど
+                  $('.hw').after($('<p>', {text: 'Transmission failed.'}).addClass('error'));
+                }, 3000);
+              });
           }
         });
       }
