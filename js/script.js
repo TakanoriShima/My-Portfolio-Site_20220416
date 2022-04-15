@@ -259,25 +259,12 @@ $(function(){
         }).done(function(data) { // ajax通信が成功したら
           //送信に成功したならば
           if (data['result']) {
-              // メール「送信」に成功したときの処理
-              // 3秒後にContactページを表示
-              $(window).load(function() {
-                setTimeout(function(){
-                  window.location.href = 'http://ksamurai.php.xdomain.jp/Portfolio/index.php#contact';
-                  // 画面にメッセージを表示、画面をリロードなど
-                  $('.hw').after($('<p>', {text: '送信を完了しました'}).addClass('send'));
-                }, 3000);
-              });
+            window.location = 'index.php#contact';
+            $('.hw').after($('<p>', {text: '送信を完了しました'}).addClass('send'));
           } else {
-              // メール送信に「失敗」した時の処理
-              // 3秒後にContactページを表示
-              $(window).load(function() {
-                setTimeout(function(){
-                  window.location.href = 'http://ksamurai.php.xdomain.jp/Portfolio/index.php#contact';
-                  // 画面にメッセージを表示
-                  $('.hw').after($('<p>', {text: '送信に失敗しました'}).addClass('error'));
-                }, 3000);
-              });
+            // 画面にメッセージを表示
+            window.location = 'index.php#contact';
+            $('.hw').after($('<p>', {text: '送信に失敗しました'}).addClass('error'));
           }
         });
       }
